@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Predict the runner!</title>
+  </head>
+
+  <body>
+    <h1>Make a prediction!</h1>
+    <form action="https://news-model.herokuapp.com/" method="POST">
+      Test file:
+      <input type="file" id="uploadfiles" />
+      <button type="submit">Submit</button>
+    </form>
+
+    {% if output %}
+    <b>Predicted Class:</b> {{ output }} {% endif %}
+  </body>
+</html>
